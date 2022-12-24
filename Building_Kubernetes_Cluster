@@ -25,4 +25,5 @@ For creating two nodes cluster Kubernetes, It is required to perform the below s
  7. sudo sysctl --system
  8. sudo apt-get update && sudo apt-get install -y containerd
  8. sudo mkdir -p /etc/containerd
- 9.
+  # Generate the configuration file
+ 9. sudo containerd config default | sudo tee /etc/containerd/config.toml
