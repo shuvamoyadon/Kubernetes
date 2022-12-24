@@ -8,4 +8,3 @@ Kubernetes is an orchestration engine for container technologies such as Docker.
   
 # Architecture 
 
-![alt text](https://kubernetes.io/docs/concepts/overview/components/)
