@@ -14,7 +14,7 @@ Kubernetes is an orchestration engine for container technologies such as Docker.
 
 Control Plane Components : 
    A. Control Manager(c-m): 
-       - Run multiple controllers utility.
+       <br> 1. Run multiple controllers utility.
        2. All controllers execute automation related task within a cluster.
        3. Responsible for noticing and responding when nodes go down.
        4. MAnaging Job Controller.
