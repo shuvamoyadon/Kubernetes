@@ -13,6 +13,10 @@ Kubernetes is an orchestration engine for container technologies such as Docker.
 # Architectural Component of Kubernetes
 
 ## Control Plane Components : 
+  ## Apiserver:  
+     1. The API server is a component of the Kubernetes control plane that exposes the Kubernetes API.
+     2. The API server is the front end for the Kubernetes control plane
+     
   ## A. Control Manager(c-m): 
        1. Run multiple controllers utility.
        2. All controllers execute automation related task within a cluster.
