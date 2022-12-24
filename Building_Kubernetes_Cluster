@@ -1,0 +1,29 @@
+For creating two nodes cluster Kubernetes, It is required to perform the below steps.
+
+##For Master node Perform the below activity 
+
+ 1. sudo hostnamectl set-hostname k8_server
+ 2. sudo vi /etc/hosts : Where you need to add below: 
+    172.31.54.12 k8server
+    172.31.55.11 worker1
+
+   14  cat << EOF | sudo tee /etc/modules-load.d/containerd.conf
+overlay
+br_netfilter
+>EOF
+
+   15  cat << EOF | sudo tee /etc/modules-load.d/containerd.conf
+overlay
+br_netfilter
+EOF
+
+   16  sudo modprobe overlay
+   17  sudo modprobe br_netfilter
+   18  cat << EOF | sudo tee /etc/sysctl.d/99-kubernetes.cri.conf
+net.bridge.bridge-nf-call-iptables =1
+net.ipv4..ip_forward = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
+
+   19  sudo sysctl --system
+   20  sudo mkdir -p /etc/containerd
