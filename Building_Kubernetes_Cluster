@@ -58,3 +58,5 @@ For creating two nodes cluster Kubernetes, It is required to perform the below s
       ## run this in worker to connect to master node.
   23. sudo kubeadm join 172.30.3.11:6443 --token 8b4lcl.swl23hrfmi --discovery-token-ca-cert-hash sha256:50e2fcc1d87d60e1e7ae18ea8b545c5e9bf5af5331c
       
+      
+  For Reference - https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/
