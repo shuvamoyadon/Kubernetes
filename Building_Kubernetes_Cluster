@@ -39,4 +39,22 @@ For creating two nodes cluster Kubernetes, It is required to perform the below s
   16. sudo apt-get install -y kubelet=1.25.0-00 kubeadm kubectl=1.25.0-00
   17. # do not want to upgrade
       sudo apt-mark hold  kubelet kubeadm kubectl
-  18. 
+  18. #After above steps , run the below commnad in master. --pod_network-cidr- just a range of IP passed
+      sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.25.0
+  19. #Now copy the below which we recieved from outpft of the above command
+      mkdir -p $HOME/.kube
+      sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+      sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  20. ## To check the response from the cluster , run this command
+      kubectl get nodes
+      
+  21. ## now networking for the worker node in master 
+      sudo ufw allow 6443/tcp
+      sudo systemctl restart kubelet.service
+      kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/manifests/tigera-operator.yaml
+      curl https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/manifests/custom-resources.yaml -O
+      kubectl create -f custom-resources.yaml
+  22. kubeadm token create --print-join-command
+      ## run this in worker to connect to master node.
+  23. sudo kubeadm join 172.30.3.11:6443 --token 8b4lcl.swl23hrfmi --discovery-token-ca-cert-hash sha256:50e2fcc1d87d60e1e7ae18ea8b545c5e9bf5af5331c
+      
