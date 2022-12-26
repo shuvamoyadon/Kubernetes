@@ -6,8 +6,9 @@ For creating two nodes cluster Kubernetes, It is required to perform the below s
  2. sudo vi /etc/hosts : Where you need to add below for ssh
     172.31.54.12 k8server
     172.31.55.11 worker1
-
-   # (this is for adding kernel parameters)
+   
+   #do all the steps below in the worker node too)
+   # (this is for adding kernel parameters
  3. cat << EOF | sudo tee /etc/modules-load.d/containerd.conf
     >overlay
     >br_netfilter
@@ -35,3 +36,7 @@ For creating two nodes cluster Kubernetes, It is required to perform the below s
      > deb https://apt.kubernetes.io/ kubernetes-xenial main
      > EOF
   15. sudo apt-get update
+  16. sudo apt-get install -y kubelet=1.25.0-00 kubeadm kubectl=1.25.0-00
+  17. # do not want to upgrade
+      sudo apt-mark hold  kubelet kubeadm kubectl
+  18. 
