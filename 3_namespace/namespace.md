@@ -12,7 +12,7 @@
    
 ## How to specify Namespace?
    We can provide namespace flag like this - 
-   command: kubectl get pods -n our_name_spacename
+   <br>command: kubectl get pods -n our_name_spacename
    <br>command: kubectl get pods --namespace our_name_spacename
    
    ![alt text](https://user-images.githubusercontent.com/42385240/210043573-20ff0df2-82f4-4bf3-843c-9d6e120ec4b3.png)
