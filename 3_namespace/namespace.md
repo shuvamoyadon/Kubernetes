@@ -22,11 +22,11 @@
    1. command: kubectl create ns mynamespace
    2. Also we can create namespace in the form of yaml file. Save this file as .yaml and run the command.
 
- <br> Example:
-   <p> apiVersion: v1
+ <br> ##Example:
+      apiVersion: v1
       kind: Namespace
       metadata:
-         name: mynamespace </p>
+         name: mynamespace
                   
  <br> command : kubectl create -f namespacefile.yaml
 
