@@ -1,0 +1,13 @@
+## After the service createdm, execute the command to expose the port: kubectl expose pod webserver --name=mysvc --port=80 --type=NodePort
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx
+  labels:
+    run: my-nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: webserver
