@@ -7,6 +7,7 @@
 
 ## How to list Namespace ?
    command: kubectl get namespaces 
+   
    ![alt text](https://user-images.githubusercontent.com/42385240/210042694-5a903651-46d5-440f-bbbf-d192556317b4.png)
    
 ## How to specify Namespace?
