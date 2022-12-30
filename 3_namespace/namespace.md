@@ -23,7 +23,7 @@
    2. Also we can create namespace in the form of yaml file. Save this file as .yaml and run the command.
 
  <br> Example:
-               apiVersion: v1
+           <p> apiVersion: v1
                kind: Namespace
                metadata:
                   name: mynamespace
