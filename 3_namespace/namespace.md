@@ -17,6 +17,20 @@
    
    ![alt text](https://user-images.githubusercontent.com/42385240/210043573-20ff0df2-82f4-4bf3-843c-9d6e120ec4b3.png)
    
+## How to create Namespace?
+   
+   1. command: kubectl create ns mynamespace
+   2. Also we can create namespace in the form of yaml file. Save this file as .yaml and run the command.
+
+ <br>Example : apiVersion: v1
+ <br>          kind: Namespace
+ <br>          metadata:
+ <br>              name: mynamespace
+                  
+ <br> command : kubectl create -f namespacefile.yaml
+
+
+   
    
 
   
