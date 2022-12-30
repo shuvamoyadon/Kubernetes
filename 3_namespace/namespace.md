@@ -7,4 +7,14 @@
 
 ## How to list Namespace ?
    command: kubectl get namespaces 
+   
+## How to specify Namespace?
+   We can provide namespace flag like this - 
+   command: kubectl get pods -n our_name_spacename
+   command: kubectl get pods --namespace our_name_spacename
+   
+   
+ 
+  
+
 
