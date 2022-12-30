@@ -26,7 +26,7 @@
  <br>          apiVersion: v1
  <br>          kind: Namespace
  <br>          metadata:
- <br>              name: mynamespace
+             <br>   name: mynamespace
                   
  <br> command : kubectl create -f namespacefile.yaml
 
