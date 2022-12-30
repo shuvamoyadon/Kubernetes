@@ -15,6 +15,8 @@
    command: kubectl get pods -n our_name_spacename
    command: kubectl get pods --namespace our_name_spacename
    
+   
+   
 
   
    
