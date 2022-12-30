@@ -27,7 +27,8 @@
       kind: Namespace
       metadata:
          name: mynamespace
-                  
+    
+    Execute the command: 
     command : kubectl create -f namespacefile.yaml
 
 
