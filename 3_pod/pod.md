@@ -9,13 +9,13 @@
    8. Pods are usually managed by higher-level resources such as Deployments, which ensure that a specified number of replicas of a pod are running at any given time.
 
 ## YAML to create POD
-      In the YAML for pod resource , these are the main required key to use. 
+      In the YAML file for pod resource , these are the main required key to use. 
       apiVersion
       kind
       metadata
       spec
       
-      TEMPLATE:
+      TEMPLATE yaml file:
       
       apiVersion: v1.                   #The apiVersion and kind fields specify that this is a pod resource that it uses.
       kind: Pod
@@ -31,5 +31,22 @@
           - containerPort: 80
           
      The pod has a single container with the specified name and image. It exposes port 80 of the container to the outside world. You can add more containers to the pod by adding additional elements to the containers list. 
+     
+## How to apply the pod in kubernetes
+  
+    Use the kubectl apply command to create the pod:
+
+    kubectl apply -f <pod-config-file.yaml>
+
+## How to see the pod whether its created or not in the cluster
+    
+    Command: we can add namespace at the end if we have any namespace
+    kubectl get pods
+    
+    
+## How to delete pod from the cluster 
+   
+   kubectl delete pod <pod-name>
+
 
 
