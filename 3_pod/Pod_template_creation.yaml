@@ -1,0 +1,24 @@
+## How to create the yaml file for pod. Must required Key in the yaml
+
+apiVersion:  ## This is used for versioning
+kind: ## what is the object name , what kind of object it it
+metadata: ## keeps metadata information about the object. It has many key like name,labels
+spec: ## what specification we are going to declare for the object. It also has many keys like containers. containers has siblings like name,
+      ## image, env etc.
+
+Below is the exmple of POD creation using yaml template file
+Example:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres  ## metadata name, we can define any name.
+  labels:
+    tier: db  ## this tier for which application
+spec:
+  containers:  ## what are the containers details?
+    - name: postgres
+      image: postgres  ## Docker container image name which will be used to create the pod.
+      env:
+        - name: POSTGRES_PASSWORD
+          value: mysecretpassword
