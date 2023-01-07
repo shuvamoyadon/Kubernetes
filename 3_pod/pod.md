@@ -10,16 +10,16 @@
 
 ## YAML to create POD
 
-apiVersion: v1
-kind: Pod
-metadata:
-  name: <pod-name>
-  labels:
-    app: <app-name>
-spec:
-  containers:
-  - name: <container-name>
-    image: <image-name>
-    ports:
-    - containerPort: 80
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: <pod-name>
+     labels:
+       app: <app-name>
+   spec:
+     containers:
+     - name: <container-name>
+       image: <image-name>
+       ports:
+       - containerPort: 80
 
