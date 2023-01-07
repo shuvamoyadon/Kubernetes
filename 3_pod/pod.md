@@ -8,6 +8,7 @@
    7. When a pod is deleted, all of its containers are terminated and their state is lost.
    8. Pods are usually managed by higher-level resources such as Deployments, which ensure that a specified number of replicas of a pod are running at any given time.
 
+## YAML to create POD
 apiVersion: v1
 kind: Pod
 metadata:
