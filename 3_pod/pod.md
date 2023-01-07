@@ -10,13 +10,13 @@
 
 ## YAML to create POD
       
-      apiVersion: v1.         #The apiVersion and kind fields specify that this is a pod resource that it uses.
+      apiVersion: v1.                   #The apiVersion and kind fields specify that this is a pod resource that it uses.
       kind: Pod
-      metadata:               # The metadata field contains information about the pod, such as its name and labels.
+      metadata:                         # The metadata field contains information about the pod, such as its name and labels.
         name: <pod-name>
         labels:
           app: <app-name>
-      spec:                   #The spec field specifies the details of the pod, including the containers details
+      spec:                             #The spec field specifies the details of the pod, including the containers details
         containers:
         - name: <container-name>
           image: <image-name>
