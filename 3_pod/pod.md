@@ -46,7 +46,7 @@
     
 ## How to delete pod from the cluster 
    
-   kubectl delete pod <pod-name>
+    kubectl delete pod <pod-name>
 
 
 
