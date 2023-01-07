@@ -15,6 +15,7 @@
       metadata
       spec
       
+      TEMPLATE:
       
       apiVersion: v1.                   #The apiVersion and kind fields specify that this is a pod resource that it uses.
       kind: Pod
