@@ -26,7 +26,7 @@
       spec:                             #The spec field specifies the details of the pod, including the containers details
         containers:
         - name: <container-name>
-          image: <image-name>
+          image: <image-name>           #Image from Docker Container
           ports:
           - containerPort: 80
           
